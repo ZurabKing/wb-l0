@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "imageUrl": {
+      "color": "./assets/img/t-shirt.png",
+      "colorless": "./assets/img/t-shirt-dis.png"
+    },
+    "name": "Футболка UZcotton мужская",
+    "params": {
+      "color": "белый",
+      "size": 56
+    },
+    "price": {
+      "old": 1051,
+      "new": 522,
+      "currency": "сом"
+    },
+    "store": "Коледино WB",
+    "companyName": "OOO Вайлдберриз",
+    "payload": {
+      "leftAmount": 2,
+      "severity": "warn"
+    },
+    "count": 1,
+    "isChecked": false,
+    "isFavorited": false
+  },
+  {
+    "id": 2,
+    "imageUrl": {
+      "color": "./assets/img/case-phone.png",
+      "colorless": "./assets/img/case-phone-dis.png"
+    },
+    "name": "Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe",
+    "params": {
+      "color": "прозрачный"
+    },
+    "price": {
+      "old": 11500,
+      "new": 10500,
+      "currency": "сом"
+    },
+    "store": "Коледино WB",
+    "companyName": "OOO Мегапрофстиль",
+    "count": 200,
+    "isChecked": false,
+    "isFavorited": false
+  },
+  {
+    "id": 3,
+    "imageUrl": {
+      "color": "./assets/img/crayon.png",
+      "colorless": "./assets/img/crayon-dis.png"
+    },
+    "name": "Карандаши цветные Faber-Castell \"Замок\", набор 24 цвета, заточенные, шестигранные, Faber-Castell",
+    "price": {
+      "old": 475,
+      "new": 247,
+      "currency": "сом"
+    },
+    "store": "Коледино WB",
+    "companyName": "OOO Вайлдберриз",
+    "payload": {
+      "leftAmount": 2,
+      "severity": "warn"
+    },
+    "count": 2,
+    "isChecked": false,
+    "isFavorited": false
+  }
+]
