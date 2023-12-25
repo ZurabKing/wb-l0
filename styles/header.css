@@ -1,10 +1,15 @@
 .header {
+  padding: 17.5px 24px;
+  background-color: var(--system-violet, #6725a8);
+}
+
+.wrapper__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
   gap: 32px;
-  padding: 17.5px 24px;
-  background-color: var(--system-violet, #6725a8);
 }
 
 .logo__container {

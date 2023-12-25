@@ -1,17 +1,21 @@
 .main {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex: 1;
   padding: 22px 25px;
   border-radius: 24px 24px 24px 24px;
   background-color: #f6f6fa;
+}
+
+.wrapper__main {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
   gap: 32px;
 }
 
 .basket__section {
   width: 100%;
-  /* float: left; */
 }
 
 .backet__main-block {
@@ -32,6 +36,18 @@
   cursor: pointer;
 }
 
+.basket__title-main {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  color: var(--Text-Black, #000);
+  font-family: Segoe UI;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.28px;
+}
 .basket__all_select-block button {
   background-color: transparent;
   border: none;
@@ -132,6 +148,10 @@
   margin-right: 8px;
 }
 
+.badge__last-title {
+  margin-top: 12px;
+}
+
 .price__cart-number {
   display: flex;
   flex-direction: column;
@@ -220,6 +240,16 @@
   line-height: 28px;
   letter-spacing: -0.2px;
   white-space: nowrap;
+}
+
+.price__cart-summ-span {
+  color: var(--Text-Black, #000);
+  text-align: right;
+  font-family: Segoe UI;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 .price__cart-summ span {
@@ -326,6 +356,17 @@
   background: var(--background-white, #fff);
 }
 
+.delivery__method-container-payment {
+  width: 100%;
+}
+
+.delivery__method-container-payment-block {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
 .delivery__method_title {
   color: var(--text-black, #000);
   font-size: 16px;
@@ -404,7 +445,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 }
 
 .delivery__method-container-title {
@@ -498,6 +539,7 @@
   padding: 16px 24px;
   border-radius: 16px;
   background: var(--background-white, #fff);
+  margin-top: 16px;
 }
 
 .delivery__recipient-fullname {
@@ -542,6 +584,10 @@
 
 .delivery__validate_input-container {
   position: relative;
+  width: 100%;
+}
+
+.delivery__validate_input-container-block {
   width: 100%;
 }
 
@@ -1007,6 +1053,10 @@
   margin-left: auto;
 }
 
+.badge__last {
+  width: fit-content;
+}
+
 .badge {
   position: relative;
 }
@@ -1043,4 +1093,10 @@
   height: 56px;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.delivery__method_span-block-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }

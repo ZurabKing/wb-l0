@@ -2,7 +2,6 @@
   display: flex;
   max-width: 500px;
   height: fit-content;
-  /* float: right; */
 }
 
 .total__cart_container {
@@ -46,7 +45,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 }
 
 .delivery__container {
@@ -96,7 +95,7 @@
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 
 .delivery__price {
@@ -207,6 +206,7 @@
 }
 
 .total__cart-button {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-top: 24px;
   border: none;
   outline: none;

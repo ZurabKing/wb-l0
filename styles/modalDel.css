@@ -101,6 +101,19 @@
   width: 0;
 }
 
+.container-label-div-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.container-label-div-block-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .container-label-div:hover input ~ .checkmark {
   background-color: #ccc;
 }

@@ -1,7 +1,5 @@
-//Вспылытие label при наведении
-const inputContainers = document.querySelectorAll(
-  ".delivery__validate_input-container"
-);
+// Всплытие label при наведении
+const inputContainers = document.querySelectorAll(".delivery__validate_input-container");
 
 inputContainers.forEach((container) => {
   const input = container.querySelector("input");
@@ -19,7 +17,7 @@ inputContainers.forEach((container) => {
   });
 });
 
-//Валидация инпутов формы
+// Валидация инпутов формы
 function validationForm(form) {
   let result = true;
 
@@ -35,30 +33,28 @@ function validationForm(form) {
     const parent = input.parentNode;
     const errorSpan = document.createElement("p");
     errorSpan.classList.add("error-span");
-    const innSpan = document.querySelector(
-      ".delivery__validate_input-container-p"
-    );
+    const innSpan = document.querySelector(".delivery__validate_input-container-p");
     innSpan.style.display = "none";
     errorSpan.textContent = text;
     parent.classList.add("error");
 
     parent.append(errorSpan);
-
-    //Функция для обработки ошибки Input
-    function getFieldName(inputId) {
-      const fieldNames = {
-        name: "Укажите имя",
-        surname: "Введите фамилию",
-        email: "Проверьте адрес электронной почты",
-        phone: "Формат: +9 999 999 99 99",
-        inn: "Проверьте ИНН",
-      };
-
-      return fieldNames[inputId] || inputId;
-    }
   }
 
-  //Функция для обработки ошибки пустого Input
+  // Функция для обработки ошибки Input
+  function getFieldName(inputId) {
+    const fieldNames = {
+      name: "Укажите имя",
+      surname: "Введите фамилию",
+      email: "Проверьте адрес электронной почты",
+      phone: "Формат: +9 999 999 99 99",
+      inn: "Проверьте ИНН",
+    };
+
+    return fieldNames[inputId] || inputId;
+  }
+
+  // Функция для обработки ошибки пустого Input
   function getFieldEmptyName(inputId) {
     const fieldNames = {
       name: "Укажите имя",
@@ -77,32 +73,31 @@ function validationForm(form) {
   inputElems.forEach((input) => {
     removeError(input);
 
-    if (input.dataset.required == "true" && input.value == "") {
+    if (input.dataset.required == "true" && input.value === "") {
       const fieldName = getFieldEmptyName(input.getAttribute("id"));
       createError(input, fieldName);
       result = false;
-    } else if (
-      input.getAttribute("id") === "phone" &&
-      input.value.replace(/\D/g, "").length !== 11
-    ) {
-      createError(input, "Формат: +7 999 999 99 99"); // Вывод ошибки для неправильного формата телефона
+      return; // Ранний возврат в случае ошибки
+    }
+
+    if (input.getAttribute("id") === "phone" && input.value.replace(/\D/g, "").length !== 11) {
+      createError(input, "Формат: +7 999 999 99 99");
       result = false;
-    } else if (
-      input.getAttribute("id") === "email" &&
-      !emailRegExp.test(input.value)
-    ) {
-      createError(input, "Проверьте адрес электронной почты"); // Вывод ошибки для неправильного формата email
+      return;
+    }
+
+    if (input.getAttribute("id") === "email" && !emailRegExp.test(input.value)) {
+      createError(input, "Проверьте адрес электронной почты");
       result = false;
-    } else if (
-      input.getAttribute("id") === "inn" &&
-      input.value.replace(/\D/g, "").length !== 14
-    ) {
-      const innSpan = document.querySelector(
-        ".delivery__validate_input-container-p"
-      );
+      return;
+    }
+
+    if (input.getAttribute("id") === "inn" && input.value.replace(/\D/g, "").length !== 14) {
+      const innSpan = document.querySelector(".delivery__validate_input-container-p");
       innSpan.style.display = "none";
       createError(input, "Проверьте ИНН");
       result = false;
+      return;
     }
   });
 
@@ -112,7 +107,7 @@ function validationForm(form) {
 const form = document.getElementById("form");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  if (validationForm(this) == true) {
+  if (validationForm(this)) {
     alert("форма отправилась");
   }
 });
